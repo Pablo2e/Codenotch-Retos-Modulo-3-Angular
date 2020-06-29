@@ -3,6 +3,8 @@ import { Ciudad } from '../models/ciudad';
 import { Temperatura } from '../models/temperatura';
 import { Clima } from '../models/clima';
 
+
+
 @Component({
   selector: 'app-ciudades',
   templateUrl: './ciudades.component.html',
