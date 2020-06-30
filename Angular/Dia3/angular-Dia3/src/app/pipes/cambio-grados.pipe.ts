@@ -5,16 +5,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CambioGradosPipe implements PipeTransform {
 
-  transform(value: number, unit: string) {
-    if(value && !isNaN(value)) {
-        if (unit === 'C') {
-            var temperature = (value - 32) /1.8 ;
-            return (temperature.toFixed(1).toString() +"ºC");
-        } else if (unit === 'F'){
-            var temperature = (value * 1.8 ) + 32
-            return (temperature.toFixed(1).toString() +"ºF");
+  transform(valor: number, unidad: string) {
+    if(valor && !isNaN(valor)) {
+        if (unidad === 'C') {
+            //var temperatura = (valor - 32) /1.8 ;
+            var temperatura = (valor);
+            return (temperatura.toFixed(1).toString() +"ºC");
+        } else if (unidad === 'F'){
+            var temperatura = (valor * 1.8 ) + 32
+            return (temperatura.toFixed(1).toString() +"ºF");
         }
     }
     return;
-}
+  }
 }

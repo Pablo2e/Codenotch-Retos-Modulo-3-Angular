@@ -16,18 +16,22 @@ export class CiudadesComponent implements OnInit {
   show:boolean=false;
   constructor() { 
     this.ciudades= [
-      new Ciudad("Madrid","España","MAD", calido),
+      /* new Ciudad("Madrid","España","MAD", calido),
       new Ciudad("Buenos Aires","Argentina","BUE", frio),
       new Ciudad("Melbourne","Australia","MEL", humedo),
-      new Ciudad("Atenas","Grecia","ATN", seco)
+      new Ciudad("Atenas","Grecia","ATN", seco) */
+      new Ciudad("Madrid","España","MAD"),
+      new Ciudad("Buenos Aires","Argentina","BUE"),
+      new Ciudad("Melbourne","Australia","MEL"),
+      new Ciudad("Atenas","Grecia","ATN")
     ]
   }
 
  
-/* public agregarCiudad(ciu: HTMLInputElement,pai: HTMLInputElement,cod: HTMLInputElement){
+public agregarCiudad(ciu: HTMLInputElement,pai: HTMLInputElement,cod: HTMLInputElement){
   let nuevaCiudad = new Ciudad(ciu.value,pai.value, cod.value);
   this.ciudades.push(nuevaCiudad)
-} */
+}
   ngOnInit(): void {
   }
 
