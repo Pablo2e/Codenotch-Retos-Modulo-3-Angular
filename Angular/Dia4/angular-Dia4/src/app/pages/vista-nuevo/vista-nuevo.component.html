@@ -1,0 +1,23 @@
+<p>Hola desde VistaNuevo</p>
+<form class="col-4">
+    <div class="form-group">
+      <label for="datosCiudad" placeholder="Ciudad">Ciudad</label>
+      <input type="text" class="form-control" #datosCiudad>
+     </div>
+    <div class="form-group">
+        <label for="datosPais">Pais</label>
+        <input type="text" class="form-control" #datosPais>
+      </div>
+    <div class="form-group">
+      <label for="datosCodigo">Codigo</label>
+      <input type="text" class="form-control" #datosCodigo>
+    </div>
+    <div>
+    <button type="button" class="btn btn-primary" (click)=agregarCiudad(datosCiudad,datosPais,datosCodigo)>Guardar</button>
+    <!-- <button type="button" class="btn btn-primary" (click)=agregarCiudad()>Guardar</button> -->
+    </div>
+  </form>
+
+  <app-vista-listado-tabla [ciudades]= "ciudades"></app-vista-listado-tabla>
+  
+  

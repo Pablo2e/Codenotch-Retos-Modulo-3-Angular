@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { Ciudad } from '../models/ciudad';
 import { Temperatura } from '../models/temperatura';
 import { Clima } from '../models/clima';
@@ -12,26 +12,33 @@ import { Clima } from '../models/clima';
 })
 export class CiudadesComponent implements OnInit {
 
-  ciudades:Ciudad[]
-  show:boolean=false;
-  constructor() { 
+  @Input() ciudadHijo:Ciudad[]
+  @Output() eventoHijo = new EventEmitter<Ciudad>()
+
+  public ciudadPadre: Ciudad
+  public ciudadCreada: Ciudad
+  constructor() {/*  
     this.ciudades= [
-      new Ciudad("Madrid","España","MAD", calido),
+      /* new Ciudad("Madrid","España","MAD", calido),
       new Ciudad("Buenos Aires","Argentina","BUE", frio),
       new Ciudad("Melbourne","Australia","MEL", humedo),
-      new Ciudad("Atenas","Grecia","ATN", seco)
-      /* new Ciudad("Madrid","España","MAD"),
+      new Ciudad("Atenas","Grecia","ATN", seco) 
+      new Ciudad("Madrid","España","MAD"),
       new Ciudad("Buenos Aires","Argentina","BUE"),
       new Ciudad("Melbourne","Australia","MEL"),
-      new Ciudad("Atenas","Grecia","ATN") */
+      new Ciudad("Atenas","Grecia","ATN")
     ]
   }
-
  
-/* public agregarCiudad(ciu: HTMLInputElement,pai: HTMLInputElement,cod: HTMLInputElement){
+public agregarCiudad(ciu: HTMLInputElement,pai: HTMLInputElement,cod: HTMLInputElement){
   let nuevaCiudad = new Ciudad(ciu.value,pai.value, cod.value);
-  this.ciudades.push(nuevaCiudad)
-} */
+  this.ciudades.push(nuevaCiudad) */
+  
+}
+eligeCiudad(nuevaCiudad:Ciudad){
+    this.ciudadCreada=nuevaCiudad
+}
+
   ngOnInit(): void {
   }
 
