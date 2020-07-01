@@ -21,21 +21,12 @@ export class VistaListadoTablaComponent implements OnInit {
 }
   agregarCiudadDetalle(ciud:Ciudad){
     
-    this.ciudadDetalle=new Ciudad(ciud.nombre, ciud.pais, ciud.codigo, ciud.clima)
-    this.agregarClimaDetalle(ciud.clima)
+    this.ciudadDetalle=ciud
   }
-  agregarClimaDetalle(clim:Clima){
-    /* this.climaDetalle =new Clima(clim.temperatura,clim.viento, clim.precipitaciones)*/
-    this.climaDetalle =new Clima(36,5,65)   
-    
-  }
-
+  
   ngOnInit(): void {
   }
 
 }
 
-let calido = new Clima(38,5,0)
-let frio = new Clima(2,15,0)
-let humedo = new Clima(38,5,80)
-let seco = new Clima(4,3,0)
+
