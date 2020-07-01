@@ -1,0 +1,80 @@
+<form>
+    <div class="form-group">
+      <label >Nombre de la Ciudad</label><br>
+      <input type="text" #ciudad>
+    </div><br>
+    <div class="form-group">
+        <label >Nombre del Pais</label><br>
+        <input type="text" #pais>
+    </div><br>
+    <div class="form-group">
+        <label >Codigo</label><br>
+        <input type="text" #codigo>
+    </div><br>
+</form>
+<button type="button" class="btn btn-primary" (click)="nuevaCiudad(ciudad.value,pais.value,codigo.value)">Añadir Ciudad</button>
+<!-- GetALL -->
+ <form>
+    <div class="form-group">
+        <label >Haz click en el boton y te muestro todas las ciudades</label>
+    </div>
+<button type="button" class="btn btn-primary" (click)="cambiarShow()">Mostrar Ciudades</button><br><br>
+<!-- <div *ngIf="show">
+    <table class="text-justify py-5 col-4">
+        <thead>
+            <tr>
+                <th scope="col" width=200px>#</th>
+                <th scope="col" width=200px>NOMBRE</th>
+                <th scope="col" width=200px>PAIS</th>
+                <th scope="col" width=200px>CODIGO</th> </tr>
+        </thead>
+        <tbody>
+                       
+            <br>
+            <tr *ngFor = "let ciudad of ciudades; index as i" >
+                <th class="col">{{i+1}}</th> 
+                <th class="col">{{ciudad.nombre}}</th>
+                <th scope="col">{{ciudad.pais}}</th>
+                <th scope="col">{{ciudad.codigo}}</th>
+            </tr> 
+        <tbody>
+    </table>
+</div> -->
+<hr>
+<!-- GetOne -->
+ <div class="form-group">
+    <label >Haz click en el boton y te muestro la ciudad correspondiente al codigo</label><br>
+    <input type="text" #codigo2>
+</div>
+<button type="button" class="btn btn-primary" (click)="ciudadPorCodigo(codigo2.value)">Mostrar Ciudad</button><br><br>
+
+<!-- EDIT -->
+<div class="form-group">
+    <label >Haz click en el boton y edito la ciudad del Codigo que me envies con los valores nuevos</label><br>
+    <form>
+        <div class="form-group">
+            <label >CodigoAntiguo</label><br>
+            <input type="text" #codigoan>
+        </div><br>
+        <div class="form-group">
+          <label >Nombre de la Ciudad</label><br>
+          <input type="text" #ciudadN>
+        </div><br>
+        <div class="form-group">
+            <label >Nombre del Pais</label><br>
+            <input type="text" #paisN>
+        </div><br>
+        <div class="form-group">
+            <label >Codigo</label><br>
+            <input type="text" #codigoN>
+        </div><br>
+    </form>    
+</div>
+<button type="button" class="btn btn-primary" (click)="editarCiudad(codigoan.value,codigoN.value,ciudadN.value,paisN.value)">Editar Ciudad</button><br><br><hr>
+<!-- DELETE -->
+<div class="form-group">
+    <label >Haz click en el boton y borro la ciudad correspondiente al codigo</label><br>
+    <input type="text" #codigo4>
+</div>
+<button type="button" class="btn btn-primary" (click)="borrarCiudad(codigo4.value)">Borrar Ciudad</button><br><br>
+</form>
