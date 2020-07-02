@@ -11,7 +11,6 @@ import { Ciudad } from 'src/app/models/ciudad';
 export class VistaComponent implements OnInit {
 
 public parametro:string
-public salida:Ciudad
 public ciudad:Ciudad
 public ciudades:Ciudad[]
 

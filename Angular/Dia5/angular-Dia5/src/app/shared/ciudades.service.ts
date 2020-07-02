@@ -8,10 +8,8 @@ export class CiudadesService {
 
   public ciudad:Ciudad
   public ciudades:Ciudad[]
-  public salida:Ciudad
   public nuevaCiudad:Ciudad
   public show:boolean=false;
-  public show2:boolean=false;
   
   constructor() { 
     this.ciudades= [
@@ -20,19 +18,15 @@ export class CiudadesService {
     new Ciudad("Melbourne","Australia","MEL"),
     new Ciudad("Atenas","Grecia","ATN")
     ]
-    let nuevaCiudad = new Ciudad("Roma", "Italia", "ROM")
   }
   
   public getAll():Ciudad[] {
-    //this.show=true
     return this.ciudades
   }
   
   public getOne(code:string):Ciudad {
     for(let i in this.ciudades){
       if(this.ciudades[i].codigo===code){
-        //this.show2=true
-        //this.ciudad=null
         return this.ciudades[i]
       }
     }
@@ -40,8 +34,6 @@ export class CiudadesService {
   
   public add(ciudad:Ciudad): boolean {
     this.ciudades.push(ciudad)
-    //this.ciudad=null
-    //this.show2=false
     return true
   }
   
@@ -65,6 +57,5 @@ export class CiudadesService {
     }
     return true
   }
-  
-  }
+}
   
