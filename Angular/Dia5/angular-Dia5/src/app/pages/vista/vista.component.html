@@ -1,0 +1,30 @@
+<div>
+    <p *ngIf="ciudadesService.ciudad!=null">
+        Nombre de la cuidad: {{ciudadesService.ciudad.nombre}}<br>
+        Pais de la cuidad: {{ciudadesService.ciudad.pais}}<br>
+        Codigo de la cuidad: {{ciudadesService.ciudad.codigo}}<br>
+    </p>
+    <hr>
+</div><br>
+
+<div *ngIf="ciudadesService.show">
+    <table class="text-justify py-5 col-4">
+        <thead>
+            <tr class="text-justify py-5 col-1">
+                <th>#</th>
+                <th>NOMBRE</th>
+                <th>PAIS</th>
+                <th>CODIGO</th> </tr>
+        </thead>
+        <tbody>
+                       
+            <br>
+            <tr *ngFor = "let ciudad of ciudades; index as i" class="text-justify py-5 col-1" >
+                <th>{{i+1}}</th> 
+                <th>{{ciudad.nombre}}</th>
+                <th>{{ciudad.pais}}</th>
+                <th>{{ciudad.codigo}}</th>
+            </tr> 
+        <tbody>
+    </table>
+</div>

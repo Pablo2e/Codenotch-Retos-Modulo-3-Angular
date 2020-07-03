@@ -3,6 +3,8 @@ import { Ciudad } from '../models/ciudad';
 import { Temperatura } from '../models/temperatura';
 import { Clima } from '../models/clima';
 
+
+
 @Component({
   selector: 'app-ciudades',
   templateUrl: './ciudades.component.html',
@@ -18,6 +20,10 @@ export class CiudadesComponent implements OnInit {
       new Ciudad("Buenos Aires","Argentina","BUE", frio),
       new Ciudad("Melbourne","Australia","MEL", humedo),
       new Ciudad("Atenas","Grecia","ATN", seco)
+      /* new Ciudad("Madrid","España","MAD"),
+      new Ciudad("Buenos Aires","Argentina","BUE"),
+      new Ciudad("Melbourne","Australia","MEL"),
+      new Ciudad("Atenas","Grecia","ATN") */
     ]
   }
 

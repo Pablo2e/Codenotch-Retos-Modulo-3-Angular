@@ -1,0 +1,37 @@
+<p>Hola desde VistaListadoTabla</p>
+<div>
+    <table class="text-justify py-5 col-4">
+        <thead>
+            <tr>
+                <th scope="col" width=200px>#</th>
+                <th scope="col" width=200px>NOMBRE</th>
+                <th scope="col" width=200px>PAIS</th>
+                <th scope="col" width=200px>CODIGO</th>
+            </tr>
+        </thead>
+        <tbody>
+                       
+            <br>
+            <tr *ngFor = "let ciudad of ciudades; index as i; let par=even;" [ngClass]="{filaPar:par}">
+                <th class="col">{{i+1}}</th> 
+                <th class="col" (click)=agregarCiudadDetalle(ciudad)>{{ciudad.nombre}}</th>
+                <th scope="col">{{ciudad.pais}}</th>
+                <th scope="col">{{ciudad.codigo}}</th>
+                
+                <!-- <div *ngIf="show">{{ciudades[i].nombre}} {{ciudades[i].pais}} {{ciudades[i].codigo}} {{ciudades[i].clima.temperatura | cambioGrados:'F'}} {{ciudades[i].clima.viento}} {{ciudades[i].clima.precipitaciones | percent }}</div> -->
+     <!-- <div *ngIf="show">{{ciudades[i].nombre}} {{ciudades[i].pais}} {{ciudades[i].codigo}} </div> -->
+                <div *ngIf="show">
+                    
+                    
+                </div>
+            </tr> 
+        <tbody>
+    </table>
+</div>
+<app-vista-detalle [ciudadHijo]= "ciudadDetalle"></app-vista-detalle>
+<!-- <br>
+    <div *ngIf="ciudades.length!=0; else noHay">
+        Listado de cuidades
+    </div>
+    <ng-template #noHay> No hay cuidades para mostrar</ng-template>
+<br><hr> -->

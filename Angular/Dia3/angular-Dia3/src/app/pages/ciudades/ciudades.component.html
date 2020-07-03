@@ -19,7 +19,7 @@
                 <th scope="col" (click)="show=true">{{ciudad.nombre}}</th>
                 <th scope="col">{{ciudad.pais}}</th>
                 <th scope="col">{{ciudad.codigo}}</th>
-            <div *ngIf="show">{{ciudades[i].nombre}} {{ciudades[i].pais}} {{ciudades[i].codigo}} {{ciudades[i].clima.temperatura}} {{ciudades[i].clima.viento}} {{ciudades[i].clima.precipitaciones | percent }}</div>
+            <div *ngIf="show">{{ciudades[i].nombre}} {{ciudades[i].pais}} {{ciudades[i].codigo}} {{ciudades[i].clima.temperatura | cambioGrados:'F'}} {{ciudades[i].clima.viento}} {{ciudades[i].clima.precipitaciones | percent }}</div>
                 
             </tr>
             
