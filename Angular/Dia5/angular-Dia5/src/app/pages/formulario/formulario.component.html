@@ -1,31 +1,31 @@
 <!-- GetALL -->
 <form>
     <div class="form-group">
-        <label >Haz click en el boton y te muestro todas las ciudades</label>
+        <label >Haz click en el boton y te muestro todas las ciudades</label><br>
+        <button type="button" class="btn btn-primary" (click)="cambiarShow()">Mostrar Ciudades</button><br>
     </div>
-<button type="button" class="btn btn-primary" (click)="cambiarShow()">Mostrar Ciudades</button><br><br>
 <hr>
 <!-- GetOne -->
  <div class="form-group">
     <label >Haz click en el boton y te muestro la ciudad correspondiente al codigo</label><br>
     <input type="text" #codigo2>
 </div>
-<button type="button" class="btn btn-primary" (click)="ciudadPorCodigo(codigo2.value)">Mostrar Ciudad</button><br><br>
+<button type="button" class="btn btn-primary" (click)="ciudadPorCodigo(codigo2.value)">Mostrar Ciudad</button><br>
 <hr>
 <!-- ADD -->
 <form>
     <div class="form-group">
       <label >Nombre de la Ciudad</label><br>
       <input type="text" #ciudad>
-    </div><br>
+    </div>
     <div class="form-group">
         <label >Nombre del Pais</label><br>
         <input type="text" #pais>
-    </div><br>
+    </div>
     <div class="form-group">
         <label >Codigo</label><br>
         <input type="text" #codigo>
-    </div><br>
+    </div>
 </form>
 <button type="button" class="btn btn-primary" (click)="nuevaCiudad(ciudad.value,pais.value,codigo.value)">Añadir Ciudad</button>
 <hr>
@@ -36,27 +36,27 @@
         <div class="form-group">
             <label >CodigoAntiguo</label><br>
             <input type="text" #codigoan>
-        </div><br>
+        </div>
         <div class="form-group">
           <label >Nombre de la Ciudad</label><br>
           <input type="text" #ciudadN>
-        </div><br>
+        </div>
         <div class="form-group">
             <label >Nombre del Pais</label><br>
             <input type="text" #paisN>
-        </div><br>
+        </div>
         <div class="form-group">
             <label >Codigo</label><br>
             <input type="text" #codigoN>
-        </div><br>
+        </div>
     </form>    
 </div>
-<button type="button" class="btn btn-primary" (click)="editarCiudad(codigoan.value,codigoN.value,ciudadN.value,paisN.value)">Editar Ciudad</button><br><br>
+<button type="button" class="btn btn-primary" (click)="editarCiudad(codigoan.value,codigoN.value,ciudadN.value,paisN.value)">Editar Ciudad</button><br>
 <hr>
 <!-- DELETE -->
 <div class="form-group">
     <label >Haz click en el boton y borro la ciudad correspondiente al codigo</label><br>
     <input type="text" #codigo4>
 </div>
-<button type="button" class="btn btn-primary" (click)="borrarCiudad(codigo4.value)">Borrar Ciudad</button><br><br>
+<button type="button" class="btn btn-primary" (click)="borrarCiudad(codigo4.value)">Borrar Ciudad</button>
 </form>

@@ -1,0 +1,23 @@
+<div class="col-6">
+<form>
+    <div class="form-group">
+      <label >Titulo</label><br>
+      <input type="text" #titulo>
+    </div>
+    <div class="form-group">
+        <label >Interprete</label><br>
+        <input type="text" #interprete>
+    </div>
+    <div class="form-group">
+        <label >Año de Publicacion</label><br>
+        <input type="text" #anyoPublicacion>
+    </div>
+    <div class="form-group">
+        <label >Identificador</label><br>
+        <input type="text" #id>
+    </div>
+</form>
+<button type="button" class="btn btn-primary " (click)="anyadir(id.value, titulo.value, interprete.value, anyoPublicacion.value)">Insertar</button>
+<button type="button" class="btn btn-primary m-5" (click)="modificar(id.value, titulo.value, interprete.value, anyoPublicacion.value)">Modificar</button>
+<button type="button" class="btn btn-primary " (click)="borrar(id.value)">Borrar</button>
+</div>
