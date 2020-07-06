@@ -22,11 +22,11 @@
 <button type="button" class="btn btn-primary m-3" (click)="modificar(id.value, titulo.value, interprete.value, anyoPublicacion.value)">Modificar</button>
 <button type="button" class="btn btn-primary " (click)="borrar(id.value)">Borrar</button>
 </div>
-<div *ngFor="let disco of discos">
+<div *ngFor="let disco of discos"> 
     <p *ngIf="discos!=null" >
         Titulo: {{disco.titulo}}<br>
         Interprete: {{disco.interprete}}<br>
         Año de Publicación: {{disco.anyoPublicacion}}<br>
     </p>
     <hr>
-</div> 
+</div>

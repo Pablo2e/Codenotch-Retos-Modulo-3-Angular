@@ -1,0 +1,20 @@
+<div class="col-6 mt-2">
+    <form>
+        <div class="form-group">
+            <label>Identificador</label><br>
+            <input type="text" class="form-control" name="disco_id" [(ngModel)]="disco.disco_id" #id="ngModel">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary " (click)="discosF(id.value)">Mostrar</button>
+        </div>
+    </form>
+</div>
+
+<div *ngFor="let disco of discos">
+    <p *ngIf="discos!=null" >
+        Titulo: {{disco.titulo}}<br>
+        Interprete: {{disco.interprete}}<br>
+        Año de Publicación: {{disco.anyoPublicacion}}<br>
+    </p>
+    <hr>
+</div>
