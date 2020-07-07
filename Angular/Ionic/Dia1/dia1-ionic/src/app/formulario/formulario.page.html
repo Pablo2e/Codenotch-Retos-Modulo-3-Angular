@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="stacked">Formulario para insertar, modificar o borrar un disco</ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Titulo</ion-label>
+      <ion-input type="text" #titulo></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Interprete</ion-label>
+      <ion-input type="text" #interprete></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Año de Publicacion</ion-label>
+      <ion-input type="text" #anyoPublicacion></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Identificador</ion-label>
+      <ion-input type="text" #id></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="secondary" expand="block" (click)="anyadir(id.value, titulo.value, interprete.value, anyoPublicacion.value)">Insertar</ion-button>
+  <ion-button color="secondary" expand="block" (click)="modificar(id.value, titulo.value, interprete.value, anyoPublicacion.value)">Modificar</ion-button>
+  <ion-button color="secondary" expand="block" (click)="borrar(id.value)">Borrar</ion-button>
+  <ion-button expand="block" routerLink="/home" routerDirection="back">Home</ion-button>
+</ion-content>
