@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Vista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="stacked">Te muestro por identificador o todos</ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Identificador</ion-label>
+      <ion-input type="text" #id2></ion-input>
+    </ion-item>
+  </ion-list>
+  <hr>
+  <div *ngFor="let disco of discos">
+    <p *ngIf="discos!=null" >
+        Titulo: {{disco.titulo}}<br>
+        Interprete: {{disco.interprete}}<br>
+        Año de Publicación: {{disco.anyoPublicacion}}<br>
+    </p>
+    <hr>
+</div>
+
+  <ion-button color="secondary" expand="block" (click)="discosF(id2.value)">Mostrar</ion-button>
+  <ion-button expand="block" routerLink="/home" routerDirection="back">Home</ion-button>
+</ion-content>

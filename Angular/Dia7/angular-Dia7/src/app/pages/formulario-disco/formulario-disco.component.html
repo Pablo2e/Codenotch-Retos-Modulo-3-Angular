@@ -1,0 +1,59 @@
+<div class="col-6 mt-2">
+    <form #discoForm="ngForm" (ngSubmit)="onSubmit(discoForm)">
+        <div class="form-group">
+            <label>Formulario para insertar, modificar o borrar un disco</label><br>
+            <label>Titulo</label><br>
+            <input type="text" class="form-control" name="titulo" [(ngModel)]="disco.titulo" #titulo="ngModel"
+            [ngClass]="{'is-invalid': discoForm.submitted && titulo.invalid}" required>
+            <div *ngIf="discoForm.submitted && titulo.invalid" class="invalid-feedback">
+                <p *ngIf="titulo.errors.required">El titulo es obligatorio</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Interprete</label><br>
+            <input type="text" class="form-control" name="interprete" [(ngModel)]="disco.interprete" #interprete="ngModel"
+            [ngClass]="{'is-invalid': discoForm.submitted && interprete.invalid}" required>
+            <div *ngIf="discoForm.submitted && interprete.invalid" class="invalid-feedback">
+                <p *ngIf="interprete.errors.required">El interprete es obligatorio</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Año de Publicacion</label><br>
+            <input type="text" class="form-control" name="anyoPublicacion" [(ngModel)]="disco.anyoPublicacion" #anyoPublicacion="ngModel"
+            [ngClass]="{'is-invalid': discoForm.submitted && anyoPublicacion.invalid}" required>
+            <div *ngIf="discoForm.submitted && anyoPublicacion.invalid" class="invalid-feedback">
+                <p *ngIf="anyoPublicacion.errors.required">El año de publicación es obligatorio</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Identificador</label><br>
+            <input type="text" class="form-control" name="disco_id" [(ngModel)]="disco.disco_id" #disco_id="ngModel">
+            <!-- [ngClass]="{'is-invalid': discoForm.submmited && disco_id.invalid}" required>
+            <div *ngIf="discoForm.submmited && disco_id.invalid" class="invalid-feedback">
+                <p *ngIf="disco_id.errors.required">El año de publicación es obligatorio</p>
+            </div> -->
+        </div>
+        <div class="form-group">
+            <p>Los validadores no van a funcionar porque he puesto los mismos para los 3 y deben ser diferentes</p>
+            <button type="submit" class="btn btn-primary" (click)="anyadir(disco_id.value, titulo.value, interprete.value, anyoPublicacion.value)">Insertar</button>
+            <button type="submit" class="btn btn-primary m-3" (click)="modificar(disco_id.value, titulo.value, interprete.value, anyoPublicacion.value)">Modificar</button>
+            <button type="submit" class="btn btn-primary " (click)="borrar(disco_id.value)">Borrar</button>
+        </div>
+    </form>
+    
+    </div>
+    <!-- <div *ngFor="let disco of discos"> 
+        <p *ngIf="discos!=null" >
+            Titulo: {{disco.titulo}}<br>
+            Interprete: {{disco.interprete}}<br>
+            Año de Publicación: {{disco.anyoPublicacion}}<br>
+        </p>
+        <hr>
+    </div> -->
+    <div>
+        <p>
+            Titulo: {{disco.titulo}}<br>
+            Interprete: {{disco.interprete}}<br>
+            Año de Publicación: {{disco.anyoPublicacion}}<br>
+        </p>
+    </div>
