@@ -19,21 +19,16 @@ export class FormularioPage implements OnInit {
   }
 
   
-  anyadir(id:number, titulo:string, interprete:string, anyoPublicacion:number )
-  {
-    if(titulo !="" && interprete !="" && anyoPublicacion !=null )
-    {
-      this.discoService.anyadirDisco(new Disco(null,titulo,interprete,anyoPublicacion)).subscribe((data)=>
-      {
+  anyadir(id:number, titulo:string, interprete:string, anyoPublicacion:number ){
+    if(titulo !="" && interprete !="" && anyoPublicacion !=null ){
+      this.discoService.anyadirDisco(new Disco(null,titulo,interprete,anyoPublicacion)).subscribe((data)=>{
         titulo = "";
         interprete = "";
         anyoPublicacion = null;
         this.presentToast("Disco insertado Correctamente");
         console.log(data)
       })
-    }
-    else
-    {
+    }else{
       this.presentToast("Falta algún campo para poder realizar la inserción")
     }
   }
